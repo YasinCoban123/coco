@@ -73,34 +73,39 @@
 
     </div>
 
-    <!-- Form -->
-    <div class="order-2 lg:order-1">
-      <h2 class="font-semibold text-2xl text-center mb-2">Contact Formulier</h2>
-      <p class=" text-m mb-4 text-center mb-2">Wilt u de locatie inkijken van ons zaak, of wilt u via email een bericht versturen naar ons? Dan kan je dat hier doen</p>
-      <p class="text-red-500 text-m mb-4 text-center mb-2">(Momenteel werkt de contactformulier niet, sorry daarvoor. Voor contact kunt u de telefoonnummer gebruiken)</p>
-      <form action="#" class="space-y-6 bg-sky-700 p-10 rounded-xl max-w-xl">
-
-        <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
-          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3" placeholder="uwemail@gmail.com" required>
-        </div>
-
-        <div>
-          <label for="subject" class="block mb-2 text-sm font-medium text-white">Onderwerp</label>
-          <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="Hier het onderwerp zetten van het bericht" required>
-        </div>
-
-        <div>
-          <label for="message" class="block mb-2 text-sm font-medium text-white">Bericht</label>
-          <textarea id="message" rows="6" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Hier het bericht plaatsen"></textarea>
-        </div>
-
-        <button type="submit" class="py-3 px-6 text-sm font-medium text-center text-blue-700 rounded-lg bg-white hover:bg-gray-300">
-          Bericht versturen
-        </button>
-
-      </form>
+<!-- Form -->
+<div class="order-2 lg:order-1">
+  <h2 class="font-semibold text-2xl text-center mb-2">Contact Formulier</h2>
+  <p class="text-m mb-4 text-center">Wilt u via email een bericht versturen naar ons? Dan kan je dat hier doen</p>
+  <form id="contact-form" class="space-y-6 bg-sky-700 p-10 rounded-xl max-w-xl">
+    <div>
+      <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
+      <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3" placeholder="uwemail@gmail.com" required>
     </div>
+    <div>
+      <label for="subject" class="block mb-2 text-sm font-medium text-white">Onderwerp</label>
+      <input type="text" name="subject" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="Hier het onderwerp zetten van het bericht" required>
+    </div>
+    <div>
+      <label for="message" class="block mb-2 text-sm font-medium text-white">Bericht</label>
+      <textarea name="message" id="message" rows="6" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Hier het bericht plaatsen"></textarea>
+    </div>
+    <button type="submit" class="py-3 px-6 text-sm font-medium text-center text-blue-700 rounded-lg bg-white hover:bg-gray-300">
+      Bericht versturen
+    </button>
+  </form>
+</div>
+
+<!-- Success Modal -->
+<div id="success-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm text-center">
+    <h3 class="text-xl font-semibold mb-2">Bericht verzonden</h3>
+    <p class="text-gray-600 mb-4">Bedankt! We nemen zo snel mogelijk contact met u op.</p>
+    <button id="close-modal" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Sluiten
+    </button>
+  </div>
+</div>
 
   </div>
 </div>
@@ -227,5 +232,6 @@
     </div>
 </footer>
     <!-- End Footer -->
+         <script src="scriptfiles/contact.js"></script>
 </body>
 </html>

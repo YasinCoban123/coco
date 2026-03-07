@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/mreygklo", {
+      const response = await fetch("https://formspree.io/f/mwvrpewz", {
         method: "POST",
         body: data,
         headers: {
